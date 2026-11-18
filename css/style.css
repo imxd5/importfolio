@@ -8,247 +8,256 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #08182c;
+    background: #08182c;
     color: white;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav {
+    width: 100%;
+    padding: 20px 7%;
+    background: #0b2039;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 10%;
-    background-color: #0b2039;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
-    font-size: 30px;
-    letter-spacing: 2px;
+    color: #55c8ff;
+    font-size: 25px;
 }
 
-.logo span {
-    color: #55c8ff;
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .menu a {
-    color: #c9dced;
+    color: white;
     text-decoration: none;
-    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 .menu a:hover {
     color: #55c8ff;
 }
 
-/* HOME */
+/* Home */
 .home {
-    min-height: 550px;
-    padding: 70px 10%;
+    min-height: 85vh;
+    padding: 60px 10%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 40px;
-    background: linear-gradient(120deg, #08182c, #123b65);
 }
 
 .home-text {
     max-width: 550px;
 }
 
-.welcome {
+.home-text h3 {
+    font-size: 20px;
     color: #55c8ff;
-    letter-spacing: 3px;
-    font-size: 13px;
-    margin-bottom: 20px;
 }
 
-.home h1 {
-    color: #55c8ff;
-    font-size: 65px;
-    margin-bottom: 10px;
+.home-text h1 {
+    font-size: 55px;
+    margin: 15px 0;
     white-space: nowrap;
 }
 
-.home h1 span {
+.home-text h1 span,
+.heading span {
     color: #55c8ff;
 }
 
-.home h3 {
-    color: #b9dfff;
-    margin-bottom: 20px;
+.home-text h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 
-.description {
-    color: #b5c9dd;
-    line-height: 2;
-    margin-bottom: 30px;
+.home-text p {
+    line-height: 1.8;
+    color: #c5d4e4;
+    margin-bottom: 25px;
 }
 
-.button {
+.btn {
     display: inline-block;
-    padding: 13px 28px;
-    background-color: #168bd1;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-}
-
-.button:hover {
-    background-color: #55c8ff;
+    padding: 12px 25px;
+    background: #55c8ff;
     color: #08182c;
-}
-
-/* PROFILE IMAGE */
-.photo {
-    padding: 10px;
-    border: 2px solid #55c8ff;
+    text-decoration: none;
     border-radius: 25px;
-    box-shadow: 0 0 25px #168bd180;
+    font-weight: bold;
 }
 
 .photo img {
-    width: 270px;
-    height: 330px;
-    display: block;
+    width: 300px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 18px;
+    border-radius: 20px;
+    border: 3px solid #55c8ff;
 }
 
-/* ABOUT */
-.about {
-    padding: 75px 10%;
+/* Headings */
+.heading {
     text-align: center;
-    background-color: #0b2039;
-}
-
-section h2 {
-    font-size: 32px;
-}
-
-section h2 span {
-    color: #55c8ff;
-}
-
-.subtitle {
-    color: #8daecb;
-    margin-top: 10px;
+    font-size: 35px;
     margin-bottom: 35px;
 }
 
+/* About and Education */
+.about {
+    padding: 70px 10%;
+}
+
 .about-box {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .about-item {
-    width: 50%;
-    padding: 30px;
-    background: #122e4d;
-    border: 1px solid #24577e;
+    background: #0b2039;
+    padding: 25px;
     border-radius: 15px;
-    text-align: left;
-    line-height: 2.2;
+    text-align: center;
+    border: 1px solid #173d5e;
+    transition: 0.3s;
+}
+
+.about-item:hover,
+.hobby-card:hover {
+    transform: translateY(-5px);
+    border-color: #55c8ff;
 }
 
 .about-item h3 {
     color: #55c8ff;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* HOBBY */
+.about-item p {
+    color: #d0dce8;
+    line-height: 1.7;
+}
+
+/* Skills and Hobby */
 .hobby {
-    padding: 75px 10%;
-    text-align: center;
+    padding: 70px 10%;
+    background: #0b2039;
 }
 
 .hobby-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .hobby-card {
-    flex: 1;
-    background-color: #102945;
-    padding: 30px;
+    background: #08182c;
+    padding: 25px;
     border-radius: 15px;
-    border: 1px solid #24577e;
-    text-align: left;
-}
-
-.hobby-card:hover {
-    border-color: #55c8ff;
-}
-
-.number {
-    font-size: 35px;
-    color: #55c8ff;
-    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #173d5e;
+    transition: 0.3s;
 }
 
 .hobby-card h3 {
+    color: #55c8ff;
     margin-bottom: 12px;
 }
 
 .hobby-card p {
-    color: #a9c3da;
-    line-height: 1.8;
+    color: #d0dce8;
+    line-height: 1.7;
 }
 
-/* CONTACT */
+/* Images */
+.work-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Contact */
 .contact {
-    background-color: #0b2039;
-    padding: 60px 10%;
+    padding: 70px 10%;
     text-align: center;
 }
 
-.contact p {
-    color: #b5c9dd;
-    margin-top: 15px;
+.contact-box {
+    background: #0b2039;
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #173d5e;
 }
 
-/* FOOTER */
+.contact-box p {
+    margin: 12px 0;
+    color: #d0dce8;
+}
+
+/* Footer */
 footer {
-    padding: 20px;
-    background-color: #061323;
+    background: #0b2039;
     text-align: center;
-    color: #7895b0;
-    font-size: 13px;
+    padding: 20px;
+    color: #a9bfd3;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-
+/* Responsive */
+@media (max-width: 900px) {
     nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .menu a {
-        margin: 8px;
-        font-size: 13px;
+        justify-content: center;
     }
 
     .home {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
     }
 
-    .home h1 {
-        font-size: 45px;
+    .about-box,
+    .hobby-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .home {
+        padding: 50px 7%;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
     }
 
     .photo img {
-        width: 220px;
+        width: 230px;
         height: 270px;
     }
 
     .about-box,
     .hobby-box {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
-    .about-item {
-        width: 100%;
+    .heading {
+        font-size: 28px;
+    }
+
+    .menu {
+        gap: 10px;
     }
 }
